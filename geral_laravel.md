@@ -81,3 +81,12 @@ programas visuais para git https://desktop.github.com/ e https://www.gitkraken.c
 A classe seria a imagem, e o container o objeto. Volumes são diretórios externos ao container.
 Para extrair nomes de contêineres docker e seus IPs, use o comando abaixo em seu terminal:
 docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+
+
+------------------SEEDERS
+Gera informações para as colunas do banco de dados de forma automática e aleatória.
+Fica no diretório database>>SEEDERS (semeadores)
+	para gerar um SEEDER php artisan make:seeder UserSeeder
+	1 - ir no container>> docker-compose exec app bash
+	2 - php artisan db:seed --> cria um usuário com os dados inseridos no UserSeeders.php
+	
