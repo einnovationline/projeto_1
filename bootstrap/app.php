@@ -41,6 +41,10 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+//erro do redis not found foi
+//https://www.appsloveworld.com/laravel/100/18/lumen-first-install-reflectionexception-class-redis-does-not-exist
+$app->register(Illuminate\Redis\RedisServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
